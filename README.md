@@ -1,4 +1,12 @@
 # 📢Minikube Installation Guide🚀
+
+## 🎡Pre-requisites
+
+* t2.medium instance type or higher
+* Ubuntu OS (Xenial or later)
+* sudo privileges
+* Internet access
+---
 ---
 ## 🎖️Install docker
 ```
