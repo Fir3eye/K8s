@@ -7,7 +7,6 @@
 * sudo privileges
 * Internet access
 ---
----
 ## 🎖️Install docker
 ```
 sudo apt-get install docker.io
