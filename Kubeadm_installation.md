@@ -42,7 +42,6 @@ sudo apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y
 
     After succesfully running, your Kubernetes control plane will be initialized successfully.
 
-   <kbd>![image](https://github.com/paragpallavsingh/kubernetes-kickstarter/assets/40052830/760276f4-9146-4bc1-aa92-48cc1c0b13f4)</kbd>
 
 
 3. Set up local kubeconfig (both for root user and normal user):
@@ -64,12 +63,15 @@ sudo apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y
     ```bash
     sudo kubeadm token create --print-join-command
     ```
-
-6. Expose port 6443 in the Security group for the Worker to connect to Master Node
-
-<kbd>![image](https://github.com/paragpallavsingh/kubernetes-kickstarter/assets/40052830/b3f5df01-acb0-419f-aa70-6d51819f4ec0)</kbd>
-
-
+6. Copy token on worker node
+    ```
+    what ever code have you generate cony on worker node 
+    ```
+   
+7. Expose port 6443 in the Security group for the `Worker` to connect to Master Node
+    ```
+    # GO on our master EC2 instance and define port on security group 
+    ```
 ---
 
 ## 🥈Worker Node🚀
@@ -82,8 +84,6 @@ sudo apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y
 
 2. Paste the join command you got from the master node and append `--v=5` at the end.
 *Make sure either you are working as sudo user or use `sudo` before the command*
-
-   <kbd>![image](https://github.com/paragpallavsingh/kubernetes-kickstarter/assets/40052830/c41e3213-7474-43f9-9a7b-a75694be582a)</kbd>
 
    After succesful join->
    <kbd>![image](https://github.com/paragpallavsingh/kubernetes-kickstarter/assets/40052830/c530b65a-4afd-4b1d-9748-421c216d64cd)</kbd>
