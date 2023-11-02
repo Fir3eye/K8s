@@ -24,6 +24,11 @@ sudo chmod 755 /usr/local/bin/minikube
 ```
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 ```
+## 🎢Add User group
+```
+sudo usermod -aG docker $USER && newgrp docker
+```
+
 ## 🥉Give Permissions and Move to bin directory
 ```
 chmod +x kubectl
@@ -31,6 +36,10 @@ mv kubectl /usr/local/bin/Kubectl
 minikube start --driver=docker
 sudo usermod -aG docker $USER && newgrp docker
 Minikube status
+```
+## 🪢Check Status
+```
+minikube status
 ```
 ---
 
